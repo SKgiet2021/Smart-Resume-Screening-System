@@ -1,0 +1,3 @@
+Required skills: python, react, machine learning
+Required degree: bachelor
+Minimum experience: 2 years
