@@ -95,7 +95,7 @@ def load_session(data):
 
 - def download_file(filename):
     # User can pass "../../../etc/passwd"
-    return open(f"/uploads/{filename}", "rb").read()
+    return open(f"/uploads/{filename}", "rb").read().
 
   
 
