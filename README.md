@@ -85,9 +85,7 @@ Open the browser link provided by Streamlit.
 PRs welcome! Open an issue for bugs or features.
 
 
-# Test for VertexRabbit
-password = "admin123"
-
+password = "test123"
 
 ## License
 
