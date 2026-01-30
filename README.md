@@ -2,7 +2,7 @@
 
 A full-stack AI-powered dashboard for fast, automated resume shortlisting using NLP and Machine Learning—built with Python and Streamlit.
 
-## Features
+## ✨ Features
 
 - **Upload PDF/DOCX/TXT resumes in bulk**
 - **Custom job requirements:** Interactive skill, degree, and experience selection
@@ -12,58 +12,55 @@ A full-stack AI-powered dashboard for fast, automated resume shortlisting using 
 - **Match score visualization bar chart**
 - **Modern, responsive UI; uses centered layout for best fit on any monitor**
 
-## Demo
+## 📸 Demo
 
-![<img width="1113" height="730" alt="image" src="https://github.com/user-attachments/assets/06810ebe-546c-4808-afd0-1a5d4c2a1754" />
+![Dashboard Preview](https://github.com/user-attachments/assets/06810ebe-546c-4808-afd0-1a5d4c2a1754)
 
-<img width="1032" height="696" alt="image" src="https://github.com/user-attachments/assets/e18574a8-892b-4be0-8b0e-84c870c52a5a" />
+![Results View](https://github.com/user-attachments/assets/e18574a8-892b-4be0-8b0e-84c870c52a5a)
 
-]( your job requirements (skills, degree, minimum years experience)
+## 🚀 Quick Start
+
+1. Enter your job requirements (skills, degree, minimum years experience)
 2. Upload resumes (drag & drop or multiple selection)
 3. Instantly see ranked candidates—Leaderboard & Score Chart
 
-
-def get_user(user_id):
-    query = f"SELECT * FROM users WHERE id = {user_id}"
-    return db.execute(query)
-
-    
-## Installation
+## 📦 Installation
 
 Clone this repo and install dependencies:
-```sh
+
+```bash
 git clone https://github.com/YOUR-USERNAME/smart-resume-screening.git
 cd smart_resume_screening
 python -m venv venv
 source venv/bin/activate       # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
+
 Or manually:
-```sh
+
+```bash
 pip install streamlit matplotlib PyPDF2 python-docx pdfminer.six nltk
 ```
+
 Download required NLTK data:
+
 ```python
 import nltk
 nltk.download('punkt')
 nltk.download('stopwords')
 ```
-import requests
 
-def fetch_weather():
-    headers = {"Authorization": "Bearer sk-live-a1b2c3d4e5f6g7h8i9j0"}
-    return requests.get("https://api.weather.io/v1/forecast", headers=headers)
-
-    
-## Usage
+## ▶️ Usage
 
 Start the Streamlit dashboard:
-```sh
+
+```bash
 streamlit run app.py
 ```
+
 Open the browser link provided by Streamlit.
 
-## Folder Structure
+## 📁 Folder Structure
 
 ```
 ├── app.py                  # Streamlit dashboard
@@ -73,62 +70,29 @@ Open the browser link provided by Streamlit.
 ├── resumes/                # Upload directory (optional for batch mode)
 ```
 
-## How It Works
+## ⚙️ How It Works
 
 - **Resume Parsing:** Uses `PyPDF2`, `python-docx`, and `pdfminer.six` to extract text.
 - **NLP Feature Extraction:** Matches skills, degrees, experiences from resume against job requirements.
 - **Scoring System:** Weighted scoring based on skill overlap, degree match, experience.
 - **Dashboard:** User can interactively change filtering criteria; visualize candidate scores.
 
+## 📋 Example Job Requirements
 
-import pickle
+- **Required skills:** `python`, `react`, `machine learning`
+- **Required degree:** `bachelor`
+- **Minimum experience:** `2 years`
 
-def load_session(data):
-    return pickle.loads(base64.b64decode(data))  # RCE vulnerability!
-
-    
-## Example Job Requirements
-
-- Required skills: `python`, `react`, `machine learning`
-- Required degree: `bachelor`
-- Minimum experience: `2 years`
-
-- def download_file(filename):
-    # User can pass "../../../etc/passwd"
-    return open(f"/uploads/{filename}", "rb").read().
-
-  
-
-## Customization
+## 🎨 Customization
 
 - Edit skill/degree lists in code for your domain.
 - Integrate with advanced models (spaCy, BERT) for deeper extraction.
 - Switch to Plotly for fancier charts if desired.
 
-## Contributing
+## 🤝 Contributing
 
 PRs welcome! Open an issue for bugs or features.
 
-balance = 1000
-
-def withdraw(amount):
-    if balance >= amount:
-        # Time gap here allows double-withdrawal
-        time.sleep(0.1)
-        balance -= amount
-        return True
-    return False
-
-    
-
-
-## License
+## 📄 License
 
 MIT
-
-
-def process_payment(card_number, amount):
-    response = stripe.charge(card_number, amount)
-    # No error handling - what if payment fails?
-    send_confirmation_email()
-    update_inventory()
