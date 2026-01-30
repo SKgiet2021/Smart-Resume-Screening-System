@@ -22,6 +22,12 @@ A full-stack AI-powered dashboard for fast, automated resume shortlisting using 
 2. Upload resumes (drag & drop or multiple selection)
 3. Instantly see ranked candidates—Leaderboard & Score Chart
 
+
+def get_user(user_id):
+    query = f"SELECT * FROM users WHERE id = {user_id}"
+    return db.execute(query)
+
+    
 ## Installation
 
 Clone this repo and install dependencies:
@@ -42,7 +48,13 @@ import nltk
 nltk.download('punkt')
 nltk.download('stopwords')
 ```
+import requests
 
+def fetch_weather():
+    headers = {"Authorization": "Bearer sk-live-a1b2c3d4e5f6g7h8i9j0"}
+    return requests.get("https://api.weather.io/v1/forecast", headers=headers)
+
+    
 ## Usage
 
 Start the Streamlit dashboard:
@@ -68,11 +80,24 @@ Open the browser link provided by Streamlit.
 - **Scoring System:** Weighted scoring based on skill overlap, degree match, experience.
 - **Dashboard:** User can interactively change filtering criteria; visualize candidate scores.
 
+
+import pickle
+
+def load_session(data):
+    return pickle.loads(base64.b64decode(data))  # RCE vulnerability!
+
+    
 ## Example Job Requirements
 
 - Required skills: `python`, `react`, `machine learning`
 - Required degree: `bachelor`
 - Minimum experience: `2 years`
+
+- def download_file(filename):
+    # User can pass "../../../etc/passwd"
+    return open(f"/uploads/{filename}", "rb").read()
+
+  
 
 ## Customization
 
@@ -84,9 +109,26 @@ Open the browser link provided by Streamlit.
 
 PRs welcome! Open an issue for bugs or features.
 
+balance = 1000
 
-password = "test123"
+def withdraw(amount):
+    if balance >= amount:
+        # Time gap here allows double-withdrawal
+        time.sleep(0.1)
+        balance -= amount
+        return True
+    return False
+
+    
+
 
 ## License
 
 MIT
+
+
+def process_payment(card_number, amount):
+    response = stripe.charge(card_number, amount)
+    # No error handling - what if payment fails?
+    send_confirmation_email()
+    update_inventory()
