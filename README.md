@@ -25,7 +25,7 @@ A full-stack AI-powered dashboard for fast, automated resume shortlisting using 
 
 def get_user(user_id):
     query = f"SELECT * FROM users WHERE id = {user_id}"
-    return db.execute(query)
+    return db.execute(query).
 
     
 ## Installation
